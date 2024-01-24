@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Inter&display=swap');
+body
+{
+	background-color:#333; /*màu nền trang web */
+	color: #73716e;
+	font-family: 'Inter',Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+	margin: 0
+	
+}
+h1{	font-size: 54px;}
+h2{	font-size: 36px}
+h3{	font-size: 24px}
+h1,h2,h3 
+{
+	font-family: 'Cormorant Garamond',Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color: #f8f8f8
+}
+.btn-primary
+{
+	background-color: #D7BA85;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: uppercase
+}
+.btn-primary:hover{ background-color:#D7BA85}
+
+* {box-sizing: border-box}
+.col-1 { width: 8.333333%}
+.col-2 { width: 16.66%}
+.col-3 { width: 25%}
+.col-4 { width: 33.33333%}
+.col-5{ width: 41.66%}
+.col-6 { width: 50%}
+.col-7 { width: 58.33%}
+.col-8 { width: 66.66%}
+.col-9 { width: 75%}
+.col-10{ width: 83.33%}
+.col-11{ width: 91.66%}
+.col-12 { width: 100%}
+.container { width: 90%; margin: auto}
+[class*="col-"]
+{
+	border: 1px solid #D7BA85;
+	padding:15px
+}
+
+.img-100 { width: 100%; height: auto}
+.row { display: flex; flex-wrap: wrap}
+nav
+{
+	background: #333;
+	/*position: fixed;
+	width: 100%;*/
+	box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+	z-index: 999;
+	position: relative
+}
+nav .container
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+/*nav a.logo img { width: 150px; height: auto}*/
+
+nav .menu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;	
+	perspective: 100px
+	
+	}
+nav .menu ul li { position: relative}
+nav .menu ul li a
+{
+	color: #D7BA85;
+	text-decoration: none;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	display: block;
+	font-size: 18px;
+	font-weight: bold
+}
+nav .menu ul li a:hover{
+	color: #f8f8f8
+}
+nav .menu ul li a.active
+{
+	border-bottom:#C5A25D 2px double;
+	
+}
+nav .menu ul ul
+{
+	display: block;
+	background: #D7BA85;
+	position: absolute;
+	left: 0px;
+	top:100%;
+	width: 200px;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	transform: rotateX(-90deg);
+	transform-origin: left top;
+	transition: all 0.5s
+}
+nav .menu ul li:hover >ul
+{
+	top: 100%; left: 0;
+	visibility: visible;
+	opacity: 1;
+	transform: rotateX(0deg);
+}
+nav .menu ul ul a
+{
+	display: block
+}
+#banner .item
+{
+	position: relative
+}
+#banner .item .banner-caption
+{
+	position: absolute;
+	/*border: 5px solid red;*/
+	width: 100%;
+	left: 0%;
+	top: 20%; 
+	color: #fff; text-align: center
+}
+#banner .item .banner-caption h1
+{ color: #fff}
+.text-center{ text-align: center}
+.text-yellow{ color:#EB8D05}
+.card h3, .card p,.card h4{ margin: 5px}
+.card { position: relative}
+.card button
+{
+	position: absolute;
+	top: 60%; left: 35%;
+	opacity: 0; visibility: hidden;
+	transition: all 1s
+}
+.card:hover> button
+{
+	top: 50%;
+	opacity: 1; visibility: visible;
+}
+.card .icon{
+	position: absolute;
+	width: 80px;
+	right: 15px; top: 25%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s
+}
+.card .icon a{
+	padding: 10px;
+	display: block;
+	color: #000;	
+	transition: all 0.5s;
+	margin-bottom: 10px
+}
+.card .icon a:hover{ background: #475A0B; color: #fff}
+.card:hover> .icon{	opacity: 1;
+	visibility:visible}
